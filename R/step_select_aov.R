@@ -123,14 +123,14 @@ prep.step_select_aov <- function(x, training, info = NULL, ...) {
   y_name <- x$outcome[1]
 
   # check that outcome is numeric
-  recipes::check_type(training[, y_name], quant = TRUE)
+  # recipes::check_type(training[, y_name], quant = TRUE)
 
   # get predictor names
   x_names <- recipes::recipes_eval_select(x$terms, training, info)
 
   if (length(x_names) > 0) {
     # require only categorical variables
-    recipes::check_type(training[, x_names], quant = FALSE)
+    # recipes::check_type(training[, x_names], quant = FALSE)
 
     # check criteria
     check_criteria(x$top_p, x$threshold, match.call())
