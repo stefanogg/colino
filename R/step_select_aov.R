@@ -120,6 +120,7 @@ step_select_aov_new <-
 prep.step_select_aov <- function(x, training, info = NULL, ...) {
   # get outcome variable
   y_name <- recipes::recipes_eval_select(x$outcome, training, info)
+  print(y_name)
   y_name <- x$outcome[1]
 
   # check that outcome is numeric
