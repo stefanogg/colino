@@ -119,6 +119,9 @@ step_select_aov_new <-
 #' @export
 prep.step_select_aov <- function(x, training, info = NULL, ...) {
   # get outcome variable
+  print(x$outcome)
+  print(training)
+  print(info)
   y_name <- recipes::recipes_eval_select(x$outcome, training, info)
   print(y_name)
   y_name <- x$outcome[1]
